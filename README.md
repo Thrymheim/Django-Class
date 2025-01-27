@@ -19,7 +19,7 @@ This Django Python Beginner Class aims to introduce you to the fundamental conce
 - A willingness to learn and practice is essential.  
 
 ## Class Structure  
-- **Duration:** 14 weeks  
+- **Duration:** 10 week
 - **Format:** Online, in-person  
 - **Sessions:** Once a week  
 - **Duration of each session:** 3 hours  
