@@ -36,9 +36,8 @@ To get the most out of this class, please ensure you have the following installe
 
 ## Course Materials  
 All course materials, including lecture slides, coding exercises, and additional resources, will be provided during the class sessions. You may also refer to the following resources for supplementary learning:  
-- [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)  
 - [Python Official Documentation](https://docs.python.org/3/)  
-- [W3Schools Python Tutorial](https://www.w3schools.com/python/)  
+- [W3Schools Django Tutorial](https://www.w3schools.com/django/)  
 - [Django Official Documentation](https://docs.djangoproject.com/)  
 - [Django for Beginners by William S. Vincent](https://djangoforbeginners.com/)  
 
