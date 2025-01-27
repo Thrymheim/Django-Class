@@ -6,7 +6,6 @@ Welcome to the Django Python Beginner Class! This course is designed for individ
 - [Course Overview](#course-overview)  
 - [Prerequisites](#prerequisites)  
 - [Class Structure](#class-structure)  
-- [Learning Objectives](#learning-objectives)  
 - [Required Tools](#required-tools)  
 - [Course Materials](#course-materials)  
 - [Contact Information](#contact-information)  
@@ -15,7 +14,7 @@ Welcome to the Django Python Beginner Class! This course is designed for individ
 This Django Python Beginner Class aims to introduce you to the fundamental concepts of programming using Python and web development using Django. Throughout the course, you will learn how to write basic programs, understand control flow, work with data structures, and build a simple web application. The course will include both theoretical lessons and practical exercises to enhance your learning experience.  
 
 ## Prerequisites  
-- No prior programming experience is required.  
+- Basic python knowdledge is required.  
 - A willingness to learn and practice is essential.  
 
 ## Class Structure  
@@ -23,21 +22,6 @@ This Django Python Beginner Class aims to introduce you to the fundamental conce
 - **Format:** Online, in-person  
 - **Sessions:** Once a week  
 - **Duration of each session:** 3 hours  
-
-## Learning Objectives  
-By the end of this course, you will be able to:  
-- Understand Python syntax and basic programming concepts.  
-- Write simple Python programs.  
-- Use control structures like loops and conditionals.  
-- Work with data types such as lists, dictionaries, sets, and tuples.  
-- Implement classes and create methods to encapsulate functionality.  
-- Write functions and understand their importance.  
-- Debug and troubleshoot simple problems in your code.  
-- Understand the basics of web development with Django.  
-- Build a simple web application using Django.  
-- Understand Django's Model-View-Template (MVT) architecture.  
-- Create and manage databases using Django's ORM.  
-- Implement user authentication and authorization.  
 
 ## Required Tools  
 To get the most out of this class, please ensure you have the following installed on your computer:  
