@@ -1,0 +1,17 @@
+    {% extends 'base.html' %}
+
+    {% block title %}Our Services{% endblock %}
+
+    {% block content %}
+        <h2>Our Services</h2>
+
+        <ul>
+            {% for service in services %}
+            <li>
+                <h3>{{ service.name|title }}</h3>
+                <p>{{ service.description|capfirst }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        <img src="https://images.squarespace-cdn.com/content/v1/59fb319d32601e310be86e59/1535046455202-5IBEUXIYW4XUL51YZWUY/Trust+Me+meme.jpg?format=1500w" style=width:300px >
+    {% endblock %}
