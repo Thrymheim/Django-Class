@@ -4,9 +4,14 @@
 
     {% block content %}
         <h2>Our Services</h2>
-
+<!-- Since we had 3 services we should use list -->
+<!-- We have two kinds of list in HTML, Unordered list and Ordered list, we went with unordered one -->
         <ul>
+            
+<!-- We have more than 1 item so we got to use for -->
             {% for service in services %}
+            
+<!-- For each item you have in your list you have to use li (short for List item) -->
             <li>
                 <h3>{{ service.name|title }}</h3>
                 <p>{{ service.description|capfirst }}</p>
