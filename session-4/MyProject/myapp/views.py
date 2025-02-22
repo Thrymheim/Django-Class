@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
+#To use our model
 from .models import Book
+#To use datetime
 from datetime import datetime
 
 def book_list(request):
+    #We wanted to show all books so we got them all
     books = Book.objects.all()
     return render(request, 'book_list.html', {'books': books})
 
