@@ -1,4 +1,4 @@
-# #Function based view
+# #Function based views
 # from django.shortcuts import render, get_object_or_404, redirect
 # from .models import Task
 #
@@ -42,8 +42,8 @@
 #         return redirect('task_list')
 #     return render(request, 'task_confirm_delete.html', {'task': task})
 
-#Class based view
-from django.views import View
+#Class based views
+from django.views import View #We need to use this if we want to write class based views
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Task
 
