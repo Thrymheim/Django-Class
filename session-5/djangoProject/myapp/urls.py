@@ -12,6 +12,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    #Remember that they are classes so we should tell django to treat them as if they are def
     path('', TaskListView.as_view(), name='task_list'),
     path('create/', TaskCreateView.as_view(), name='task_create'),
     path('update/<int:pk>/', TaskUpdateView.as_view(), name='task_update'),
