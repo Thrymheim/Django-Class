@@ -52,6 +52,7 @@ class TaskListView(View):
     def get(self, request):
         query = request.GET.get('q')  # Get the search query
         if query:
+            #__icontains Makes our search TO NOT BE case-insensitive.
             tasks = Task.objects.filter(title__icontains=query) | Task.objects.filter(description__icontains=query)
         else:
             tasks = Task.objects.all()
