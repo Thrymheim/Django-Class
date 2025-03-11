@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Laptop{% endblock %}
+
+{% block content %}
+    <h2>Edit Laptop</h2>
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <label>Name:</label>
+            <input type="text" name="name" value="{{ laptop.name }}" required>
+        </p>
+        <p>
+            <label>Description:</label>
+            <textarea name="description" required>{{ laptop.description }}</textarea>
+        </p>
+        <button type="submit">Update Laptop</button>
+    </form>
+{% endblock %}
