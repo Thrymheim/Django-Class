@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Laptop Shop{% endblock %}</title>
+</head>
+<body>
+      {% if user.is_authenticated %}
+          <p>Hello, {{ user.username }}!</p>
+          <a href="{% url 'logout' %}">Logout</a>
+      {% else %}
+          <a href="{% url 'login' %}">Login</a>
+          <a href="{% url 'signup' %}">Sign Up</a>
+      {% endif %}
+      {% block content %}
+      {% endblock %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Feedback - {{ laptop.name }}{% endblock %}
+
+{% block content %}
+    <h2>Add Feedback for {{ laptop.name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Feedback</button>
+    </form>
+{% endblock %}

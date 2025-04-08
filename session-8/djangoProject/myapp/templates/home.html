@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Laptop Shop{% endblock %}
+
+{% block content %}
+    <h2>Welcome to Laptop Shop</h2>
+    
+    {% if user.is_authenticated %}
+        {% if user.is_staff %}
+            <a href="{% url 'add_laptop' %}">Add New Laptop</a>
+        {% endif %}
+        
+        <h3>Available Laptops:</h3>
+        {% for laptop in laptops %}
+                <h4>{{ laptop.name }}</h4>
+                <p>{{ laptop.description }}</p>
+                <a href="{% url 'laptop_detail' laptop.id %}">View Details</a>
+        {% endfor %}
+    {% else %}
+        <p>Please <a href="{% url 'login' %}">login</a> to view laptops.</p>
+    {% endif %}
+{% endblock %}

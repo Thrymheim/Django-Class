@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ laptop.name }} - Details{% endblock %}
+
+{% block content %}
+        <h2>{{ laptop.name }}</h2>
+        <p>{{ laptop.description }}</p>
+
+        <h3>Feedbacks</h3>
+        {% for feedback in laptop.feedbacks.all %}
+                <p>Rating: {{    feedback.rating }}/5</p>
+                <p>{{ feedback.comment }}</p>
+                <p>By {{ feedback.user.username }} on {{ feedback.created_at|date }}</p>
+        {% endfor %}
+
+        <a href="{% url 'add_feedback' laptop.id %}">Add Feedback</a>
+        <a href="{% url 'home' %}">Back to Home</a>
+{% endblock %}
