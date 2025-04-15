@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Details {% endblock %}
+{% block content %}
+    <section class="project-detail">
+        <h2>{{ project.title }}</h2>
+        {% if project.image %}
+            <img src="{% project.image %}" alt="{{ project.title }}" width="300px">
+        {% endif %}
+    <p>{{ project.description }}</p>
+    <p>Technologies: {{ project.technology }}</p>
+    <p>Created : {{ project.created_at }}</p>
+    {% if project.url %}
+        <a href="{{ project.url }}"  target="_blank">View my project</a>
+    {% endif %}
+     <a href="{% url 'home' %}">Backk to home</a>
+    </section>
+{% endblock %}

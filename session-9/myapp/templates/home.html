@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %} Home page {% endblock %}
+
+{% block content %}
+    {% if about %}
+    <section id="about">
+        <h2>About</h2>
+        {% if about.profile_image %}
+            <img src="{{ about.profile_image  }}" alt="{{ about.name }}" width="200px">
+        {% endif %}
+        <h3>{{ about.name }}</h3>
+        <h3>{{ about.bio }}</h3>
+        <p>contact: {{ about.email }}</p>
+        {% if about.resume %}
+            <a href="{{ about.resume }}"  target="_blank">View my resume</a>
+        {% endif %}
+    </section>
+    {% endif %}
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in skills %}
+            <li>
+                {{ skill.name }} --> {{ skill.level }}/5
+            </li>
+            {% empty %}
+            <li>I have no skill</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        {% for project in projects %}
+        <h3>{{ project.title }}</h3>
+        {% if project.image %}
+            <img src="{{ project.image }}" alt="{{ project.title }}" width="300px">
+        {% endif %}
+        <p>{{ project.description|truncatewords:30 }}</p>
+        <p>Technologies : {{ project.technology }}</p>
+        <a href="{% url 'project_detail' project.id %}">View detail</a>
+        {% if project.url %}
+             <a href="{{ project.url }}"  target="_blank">View my project</a>
+            {% endif %}
+            <hr>
+        {% empty %}
+            <p>No projects yet</p>
+        {% endfor %}
+    </section>
+
+{% endblock %}
